@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "d11694c3-272b-4c8b-a519-186637375458",
+		"name": "MBB Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10315417"
+	},
+	"item": [
+		{
+			"name": "List Inquiry MBB Loan Application",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"e12ef98d-f79c-473f-8478-8916929e9fb0\",\r\n  \"applicantName\": \"Teh Fu Hau8\",\r\n  \"amount\": 100000.00,\r\n  \"ccrisScore\": 2.00,\r\n  \"ctosScore\": 3.00,\r\n  \"status\": \"PENDING\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/mbb-loan-application/list?page=0&size=10&sort=desc&sortColumn=amount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"mbb-loan-application",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "desc"
+						},
+						{
+							"key": "sortColumn",
+							"value": "amount"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get MBB Loan Application By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/api/mbb-loan-application?id=90acbfcd-52f9-498c-a40f-94a64fcd172d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"mbb-loan-application"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "90acbfcd-52f9-498c-a40f-94a64fcd172d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete MBB Loan Application By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/api/mbb-loan-application?id=90acbfcd-52f9-498c-a40f-94a64fcd172d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"mbb-loan-application"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "90acbfcd-52f9-498c-a40f-94a64fcd172d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create MBB Loan Application",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"applicantName\": \"Teh Fu Hau12\",\r\n  \"amount\": 100000.00,\r\n  \"ccrisScore\": 2.00,\r\n  \"ctosScore\": 3.00,\r\n  \"status\": \"PENDING\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/mbb-loan-application",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"mbb-loan-application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update MBB Loan Application",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"fe8cb282-7920-45f8-8118-9c96612ee0b9\",\r\n  \"applicantName\": \"Teh Fu HauXX\",\r\n  \"amount\": 100001.00,\r\n  \"ccrisScore\": 3.00,\r\n  \"ctosScore\": 4.00,\r\n  \"status\": \"APPROVED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/mbb-loan-application",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"mbb-loan-application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Zip Code Info By Country Code & Post Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/api/zip-code?countryCode=my&zipCode=68100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"zip-code"
+					],
+					"query": [
+						{
+							"key": "countryCode",
+							"value": "my"
+						},
+						{
+							"key": "zipCode",
+							"value": "68100"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
